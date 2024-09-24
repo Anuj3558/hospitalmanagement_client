@@ -30,7 +30,7 @@ const Navbar = () => {
     const fetchUserData = async () => {
         try {
             const cookie = Cookies.get("_id");
-            const response = await axios.post("https://hospital-management-production-c971.up.railway.app/auth",{cookie}, { withCredentials: true });
+            const response = await axios.post("https://hospital-management-a92k.onrender.com/auth",{cookie}, { withCredentials: true });
             const user = response.data.user;
             setState(prevState => ({
                 ...prevState,
