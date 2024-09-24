@@ -11,7 +11,7 @@ const MyAppointmentPage = () => {
     useEffect(() => {
         // Fetch user's appointment data from the backend
         
-        axios.get('https://hospital-management-production-c971.up.railway.app/my-appointments', {
+        axios.get('https://hospital-management-a92k.onrender.com/my-appointments', {
             withCredentials: true
         })
         .then(response => {
@@ -23,7 +23,7 @@ const MyAppointmentPage = () => {
     }, []);
 
     const handleCancelAppointment = (id) => {
-        axios.put(`https://hospital-management-production-c971.up.railway.app/appointments/${id}/cancel`)
+        axios.put(`https://hospital-management-a92k.onrender.com/appointments/${id}/cancel`)
         .then(response => {
             setAppointments(prevAppointments => prevAppointments.map(item => item._id === id ? { ...item, status: 'Canceled' } : item));
         })
