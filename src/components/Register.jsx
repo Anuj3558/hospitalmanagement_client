@@ -24,7 +24,7 @@ const RegisterPage = () => {
         city
       };
     
-      const response = await axios.post("https://hospital-management-production-c971.up.railway.app/register", {formData});
+      const response = await axios.post("https://hospital-management-a92k.onrender.com/register", {formData});
       console.log(response);
       if (response.data === 201) {
         navigate("/login");
