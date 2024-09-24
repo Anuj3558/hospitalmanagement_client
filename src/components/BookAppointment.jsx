@@ -12,7 +12,7 @@ const BookAppointment = () => {
     try {
       const cookie = Cookies.get("_id");
       console.log(cookie);
-      const res = await axios.post('https://hospital-management-production-c971.up.railway.app/auth',{cookie}, {
+      const res = await axios.post('https://hospital-management-a92k.onrender.com/auth',{cookie}, {
         withCredentials: true,
       });
          console.log(res);
@@ -65,7 +65,7 @@ const BookAppointment = () => {
     
     try {
       const cookie = Cookies.get("_id");
-      const res = await axios.post('http://localhost:3001/bookapt', formData, {
+      const res = await axios.post('https://hospital-management-a92k.onrender.com/bookapt', formData, {
         withCredentials: true
       });
       console.log(res);
