@@ -19,7 +19,7 @@ const LoginPage = () => {
     console.log(formData);
 
     try {
-      const response = await axios.post("https://hospital-management-production-c971.up.railway.app/login", {formData});
+      const response = await axios.post("https://hospital-management-a92k.onrender.com//login", {formData});
       console.log(response.data.token);
      if(response.data.isAdmin){
       message.success("Login succesfull")
